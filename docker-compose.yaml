@@ -24,6 +24,7 @@ services:
       - "19002:19002"
     volumes:
       - .:/app
-    command: npm start
+    command: >
+      bat -c "npm install && npx expo start --tunnel"
     depends_on:
       - jenkins
